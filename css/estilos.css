@@ -1,0 +1,196 @@
+
+*{ /*quita el margin por default del navegador*/
+    margin: 0;
+}
+
+/* parar colocar pading sin que afecte en contenido principal */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+img{ 
+    max-width: 100%;  /*imagen responsiva*/
+}
+
+p{
+    font-size: 16px;
+    line-height: 2;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.boton{
+    background-color: #00b8e4;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold; /*negrilla*/
+    font-size: 18px;
+}
+
+.boton:hover{
+    background-color: #098fb1; 
+}
+
+.site-header{
+    padding: 20px 0; 
+}
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/*navegacion*/
+.barra{
+    background-color: #DB008b;
+}
+
+.navegacion-principal a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 22px;
+    display: block; /*en dispositivos moviles da salto de linea*/
+    text-align: center; /*en dispositivos*/
+    padding: 20px; /*separacion en dispositivos moviles*/
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal a{        
+        display: inline-block; /*en dispositivos grandes y tambien aplica el pading*/ 
+        margin-right: 20px; /*separacion entre enlaces*/       
+    }     
+}
+
+.navegacion-principal a:hover{        
+    background-color: #00b8e4; /*cambio de color al pasar el mouse*/      
+}
+
+/*CONTENEDORES PRINCIPAL*/
+.contenido-principal{
+   /* margin-top: 40px;*/
+}
+
+.contenido-principal, .sidebar{
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        width: 70%;  /*se recomienda colocar el ancho en porcentaje*/
+        float: left;
+        padding: 0 60px 0 0;
+    }
+    
+    .asidebar{
+        width: 30%;
+        float: right;
+        padding: 0;
+        margin-top: 40px;
+        
+    }    
+}
+
+/*ENTRADAS BLOG*/
+h2{
+    color: #00b8e4;
+    margin-bottom: 20px; /*separacion hacia abajo*/
+}
+
+.entrada{
+    margin-top: 30px; /*separacion hacia arriba*/
+}
+
+.entrada:last-of-type{
+    margin-bottom: 0; /*qieta el espacio hacia abajo de la ultima entrada*/
+}
+
+.entrada img{
+    display: block; /*para que tome todo el espacio disponible en movil; por default las img son inline*/
+}
+
+/*tamño de la imagen en dsipositivo grande*/
+@media (min-width: 768px){
+    .entrada img{
+        width: 300px; /*tamaño de img en dispositivo grante*/
+        float: left;  /*hace que el texto bordee la img*/
+        margin: 0 30px 0 0;
+    }
+}
+
+.entrada p{
+    text-align: justify;
+}
+
+/*SIDEBAR*/
+.asidebar ul{
+    list-style: none;
+    padding: 0;
+}
+
+.asidebar ul li{    
+    padding: 10px;
+}
+.asidebar ul li:hover{
+    background-color: #00b8e4;
+    
+}
+.asidebar ul li a{
+    color: #00b8e4;
+    font-size: 18px;
+    text-decoration: none;
+}
+.asidebar ul li:hover a{
+    color: #ffffff;  
+}
+
+.footer-sitio{
+    background-color: #DB008b;
+    padding-top: 40px;
+    margin-top: 60px;
+    color: #ffffff;
+    text-align: center;
+
+}
+.footer-sitio h2{
+    color: #ffffff;
+}
+
+.footer-sitio a{
+    color: #ffffff;
+    text-decoration: none;    
+}
+
+@media (min-width: 768px) {
+    .footer-sitio .nosotros{
+        float: left;
+        width: 30%;
+        text-align: left;
+    }
+    .footer-sitio .menu{
+        float: right;
+        width: 50%;
+        text-align: right;
+    }    
+}
+
+.copyright{
+    background-color: rgb(153, 4, 98);
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding: 20px 0; 
+}
